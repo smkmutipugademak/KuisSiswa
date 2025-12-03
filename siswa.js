@@ -1,4 +1,5 @@
-/ --- TEMPEL URL APPS SCRIPT HASIL DEPLOY TERBARU DISINI ---
+// --- KONFIGURASI ---
+// Pastikan URL ini SATU BARIS, jangan sampai terputus/enter
 const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxyBwuLgvxsPo7DxwGQnSgsMUL_gPBzBVmSVtQwPHBb7Kov6IidUxMfc8-iUjyrsjWBvA/exec";
 
 let questions = [];
@@ -22,7 +23,7 @@ async function joinGame() {
     btn.disabled = true;
 
     try {
-        // 1. Ambil Soal dulu dari Database
+        // 1. Ambil Soal dari Database
         // Tambahkan timestamp agar tidak cache
         const res = await fetch(SCRIPT_URL + "?action=getQuestions&t=" + new Date().getTime());
         questions = await res.json();
@@ -47,7 +48,7 @@ async function joinGame() {
         loadQ();
 
     } catch (e) {
-        alert("Gagal koneksi! Pastikan sudah Deploy New Version.");
+        alert("Gagal koneksi! Pastikan sudah Deploy New Version dan URL benar.");
         console.error(e);
         btn.innerText = "GABUNG";
         btn.disabled = false;
