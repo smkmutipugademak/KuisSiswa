@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kuis Siswa</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="siswa.css">
+</head>
+
+<body>
+
+    <div id="screen-login" class="screen animate__animated animate__fadeIn">
+        <h1>🚀 MASUK KUIS</h1>
+        <input type="text" id="group-name" placeholder="Nama" autocomplete="off">
+        <button onclick="joinGame()" class="btn-main">GABUNG</button>
+    </div>
+
+    <div id="screen-game" class="screen hide">
+        <div class="top-info">
+            <span>Skor: <b id="score-display">0</b></span>
+            <span id="q-counter">Soal 1</span>
+        </div>
+        <div class="card-question animate__animated animate__zoomIn">
+            <h2 id="q-text">Loading...</h2>
+        </div>
+        <div id="btn-container" class="grid-options"></div>
+    </div>
+
+    <div id="screen-end" class="screen hide animate__animated animate__bounceIn">
+        <h1>🎉 SELESAI! 🎉</h1>
+        <p>Lihat Layar Guru untuk Peringkat</p>
+        <h2>Skor Akhir: <span id="final-score">0</span></h2>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="siswa.js"></script>
+</body>
+
+</html>

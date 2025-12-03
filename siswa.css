@@ -1,0 +1,121 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Fredoka One', cursive;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    color: white;
+}
+
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.screen {
+    width: 90%;
+    max-width: 500px;
+}
+
+.hide {
+    display: none;
+}
+
+input {
+    padding: 20px;
+    border-radius: 15px;
+    border: none;
+    width: 80%;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-main {
+    background: #fff;
+    color: #e73c7e;
+    font-size: 1.2rem;
+    padding: 15px 40px;
+    border: none;
+    border-radius: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 5px 0 #ccc;
+}
+
+.btn-main:active {
+    transform: translateY(5px);
+    box-shadow: none;
+}
+
+.top-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+}
+
+.card-question {
+    background: white;
+    color: #333;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    margin-bottom: 30px;
+    min-height: 100px;
+}
+
+.grid-options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.btn-opt {
+    padding: 30px 10px;
+    border: none;
+    border-radius: 15px;
+    color: white;
+    font-size: 1.2rem;
+    font-family: 'Fredoka One';
+    cursor: pointer;
+    position: relative;
+    box-shadow: 0 6px 0 rgba(0, 0, 0, 0.2);
+}
+
+.btn-opt:active {
+    transform: translateY(6px);
+    box-shadow: none;
+}
+
+.c0 {
+    background: #ff4757;
+}
+
+.c1 {
+    background: #2ed573;
+}
+
+.c2 {
+    background: #1e90ff;
+}
+
+.c3 {
+    background: #ffa502;
+}
